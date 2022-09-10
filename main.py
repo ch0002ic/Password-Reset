@@ -97,10 +97,10 @@ def main():
     print(logo)
 
     options = f"""
-    --*--
+--*----*----*----*----*----*--
 [{Fore.LIGHTRED_EX}1{Fore.RESET}] - Email Password Reset
 [{Fore.LIGHTRED_EX}2{Fore.RESET}] - Username Password Reset
-    --*--
+--*----*----*----*----*----*--
     """
     print(options)
     option = input(f"[{Fore.LIGHTGREEN_EX}+{Fore.RESET}] Enter: ")
