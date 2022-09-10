@@ -58,7 +58,6 @@ class PasswordReset:
 
         print(f"[{Fore.LIGHTRED_EX}+{Fore.RESET}] Sent Password Reset To: {Fore.LIGHTRED_EX}{response_info}{Fore.RESET}")
 
-        exit()
 
     def username(self, username):
         guid = str(uuid.uuid4())
@@ -81,59 +80,57 @@ class PasswordReset:
         
         print(f"[{Fore.LIGHTRED_EX}+{Fore.RESET}] Sent Password Reset To: {Fore.LIGHTRED_EX}{response_info}{Fore.RESET}")
 
-        exit()
 
 reset = PasswordReset()
 
 def main():
-
-    logo = f"""{Fore.LIGHTGREEN_EX}
+    while True:
+        logo = f"""{Fore.LIGHTGREEN_EX}
  _____                             _    _____             _   
 |  _  |___ ___ ___ _ _ _ ___ ___ _| |  | __  |___ ___ ___| |_ 
 |   __| .'|_ -|_ -| | | | . |  _| . |  |    -| -_|_ -| -_|  _|
 |__|  |__,|___|___|_____|___|_| |___|  |__|__|___|___|___|_|  \n {Fore.RESET}
     """
 
-    print(logo)
+        print(logo)
 
-    options = f"""
+        options = f"""
 --*----*----*----*----*----*--
 [{Fore.LIGHTRED_EX}1{Fore.RESET}] - Email Password Reset
 [{Fore.LIGHTRED_EX}2{Fore.RESET}] - Username Password Reset
 --*----*----*----*----*----*--
-    """
-    print(options)
-    option = input(f"[{Fore.LIGHTGREEN_EX}+{Fore.RESET}] Enter: ")
+"""
+        print(options)
+        option = input(f"[{Fore.LIGHTGREEN_EX}+{Fore.RESET}] Enter: ")
 
-    if option == "1":
-        os.system('cls')
-        # os.system('clear') For Linux/Mac
-        email_logo = f"""{Fore.LIGHTCYAN_EX}                     
+        if option == "1":
+            os.system('cls')
+            # os.system('clear') For Linux/Mac
+            email_logo = f"""{Fore.LIGHTCYAN_EX}                     
  _____           _ _ 
 |   __|_____ ___|_| |
 |   __|     | .'| | |
 |_____|_|_|_|__,|_|_| {Fore.RESET} \n
-    """
-        print(email_logo)
-        email = input(f"[{Fore.LIGHTRED_EX}+{Fore.RESET}] Email: ")
-        reset.email(email=email)
+"""
+            print(email_logo)
+            email = input(f"[{Fore.LIGHTRED_EX}+{Fore.RESET}] Email: ")
+            reset.email(email=email)
 
-    elif option == "2":
-        os.system('cls')
-        # os.system('clear') For Linux/Mac
-        username_logo = f"""{Fore.LIGHTCYAN_EX}                                    
+        elif option == "2":
+            os.system('cls')
+            # os.system('clear') For Linux/Mac
+            username_logo = f"""{Fore.LIGHTCYAN_EX}                                    
  _____                               
 |  |  |___ ___ ___ ___ ___ _____ ___ 
 |  |  |_ -| -_|  _|   | .'|     | -_|
 |_____|___|___|_| |_|_|__,|_|_|_|___| \n {Fore.RESET}
-    """
-        print(username_logo)
-        username = input(f"\n[{Fore.LIGHTRED_EX}+{Fore.RESET}] Username: ")
-        reset.username(username=username)
-    else:
-        exit()
+"""
+            print(username_logo)
+            username = input(f"\n[{Fore.LIGHTRED_EX}+{Fore.RESET}] Username: ")
+            reset.username(username=username)
+        else:
+            exit()
 
 
 if __name__ == '__main__':
-    while True:
-        main()
+    main()
