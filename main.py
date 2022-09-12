@@ -1,6 +1,7 @@
 import os
 import time
 import uuid
+import platform
 
 try:
     import requests
@@ -29,8 +30,8 @@ Enjoy! :)
 """
 
 init(autoreset=True)
-os.system('cls')
-# os.system('clear') For Linux/Mac
+os.system("cls" if platform.system() == "Windows" else "clear")
+
 r = requests.Session()
 
 class PasswordReset:
@@ -104,8 +105,7 @@ def main():
         option = input(f"[{Fore.LIGHTGREEN_EX}+{Fore.RESET}] Enter: ")
 
         if option == "1":
-            os.system('cls')
-            # os.system('clear') For Linux/Mac
+            os.system("cls" if platform.system() == "Windows" else "clear")
             email_logo = f"""{Fore.LIGHTCYAN_EX}                     
  _____           _ _ 
 |   __|_____ ___|_| |
@@ -117,8 +117,7 @@ def main():
             reset.email(email=email)
 
         elif option == "2":
-            os.system('cls')
-            # os.system('clear') For Linux/Mac
+            os.system("cls" if platform.system() == "Windows" else "clear")
             username_logo = f"""{Fore.LIGHTCYAN_EX}                                    
  _____                               
 |  |  |___ ___ ___ ___ ___ _____ ___ 
