@@ -1,5 +1,4 @@
 import os
-import time
 import uuid
 import platform
 
@@ -7,27 +6,22 @@ import platform
 try:
     import requests
     from colorama import Fore, init
-except:
+except ModuleNotFoundError:
     os.system('pip install requests')
     import requests
     os.system('pip install colorama')
     from colorama import Fore, init
 
 """
-
 --*--
 Title: Instagram Password Reset Bot
 By: Braily Guzman
-
 Instagram: @linuxbg
 Twitter & GitHub: BrailyGuzman
 LinkedIn: https://linkedin.com/in/braily
-
 YouTube: https://www.youtube.com/channel/UCG5uDYqBUU0f_XiCoUhaQIg
 --*--
-
 Enjoy! :)
-
 """
 
 init(autoreset=True)
