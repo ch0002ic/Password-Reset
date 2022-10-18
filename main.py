@@ -71,7 +71,7 @@ class PasswordReset:
             response_info = response.json()["obfuscated_email"]
         except:
             print(f"[{Fore.LIGHTRED_EX}ERROR{Fore.RESET}] User Not Found")
-            exit()
+            time.sleep(2)
         
         print(f"[{Fore.LIGHTRED_EX}+{Fore.RESET}] Sent Password Reset To: {Fore.LIGHTRED_EX}{response_info}{Fore.RESET}")
 
