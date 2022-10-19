@@ -1,6 +1,7 @@
 import os
 import uuid
 import platform
+import time
 
 # Importing The Modules
 try:
@@ -69,11 +70,11 @@ class PasswordReset:
         try:
             response = r.post(url, headers=headers, data=data)
             response_info = response.json()["obfuscated_email"]
+            print(f"[{Fore.LIGHTRED_EX}+{Fore.RESET}] Sent Password Reset To: {Fore.LIGHTRED_EX}{response_info}{Fore.RESET}")
         except:
             print(f"[{Fore.LIGHTRED_EX}ERROR{Fore.RESET}] User Not Found")
             time.sleep(2)
-        
-        print(f"[{Fore.LIGHTRED_EX}+{Fore.RESET}] Sent Password Reset To: {Fore.LIGHTRED_EX}{response_info}{Fore.RESET}")
+            
 
 reset = PasswordReset()
 
